@@ -3,7 +3,7 @@ var connectionString = 'mongodb://student1:student1@ds115411.mlab.com:15411/chor
 var connection = mongoose.connection
 
 
-mongoose.connect(connectionString)
+mongoose.connect(connectionString, { useNewUrlParser: true })
 
 mongoose.PromiseProvider = Promise
 
