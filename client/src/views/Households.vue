@@ -4,17 +4,18 @@
       <h4>CHORE &nbsp;
         <img alt="Vue logo" src="../assets/logo.png" class="favicon-style">UER</h4>
     </router-link>
+    <household />
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-  import households from '@/views/households'
+  import household from '@/components/Household'
 
   export default {
     name: 'households',
     components: {
-      households
+      household
     }
   }
 </script>

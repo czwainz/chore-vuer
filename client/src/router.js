@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Household from './views/Household.vue'
+import households from './views/Households.vue'
 import Login from './views/Login.vue'
 
 // import Boards from './views/Boards.vue'
@@ -12,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'household',
-      component: Household
+      name: 'households',
+      component: households
     },
     {
       path: '/login',

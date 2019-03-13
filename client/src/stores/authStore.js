@@ -6,7 +6,7 @@ import router from '../router'
 Vue.use(Vuex)
 
 let auth = Axios.create({
-  baseURL: "https://localhost:3000/auth/",
+  baseURL: "//localhost:3000/auth/",
   timeout: 3000,
   withCredentials: true
 })
@@ -18,7 +18,7 @@ export default ({
       auth.post('register', newUser)
         .then(res => {
           commit('setUser', res.data)
-          router.push({ name: 'household' })
+          router.push({ name: 'households' })
         })
     },
     authenticate({ commit, dispatch }) {
@@ -36,7 +36,7 @@ export default ({
       auth.post('login', creds)
         .then(res => {
           commit('setUser', res.data)
-          router.push({ name: 'household' })
+          router.push({ name: 'households' })
         })
     },
     logout({ commit }) {

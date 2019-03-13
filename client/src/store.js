@@ -9,13 +9,16 @@ Vue.component('drag', Drag);
 Vue.component('drop', Drop);
 
 export default new Vuex.Store({
-  modules: {
-    authStore
-  },
   state: {
     user: {}
   },
+  modules: {
+    authStore
+  },
   mutations: {
+    setUser(state, user) {
+      state.user = user
+    }
 
   },
   actions: {
