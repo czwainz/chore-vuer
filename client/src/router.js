@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Household from './views/Household.vue'
+import Login from './views/Login.vue'
+
+// import Boards from './views/Boards.vue'
+// import Board from './views/Board.vue'
 
 Vue.use(Router)
 
@@ -8,12 +12,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'household',
+      component: Household
     },
     {
-      path: '/household',
-      name: 'household',
-    }
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
   ]
 })

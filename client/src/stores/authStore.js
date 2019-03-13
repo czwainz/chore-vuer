@@ -25,7 +25,7 @@ export default ({
       auth.get('authenticate')
         .then(res => {
           commit('setUser', res.data)
-          dispatch('getBoards')
+          // dispatch('getBoards')
           // router.push({ name: 'boards' })
         }).catch(err => {
           console.error('Not logged in')
@@ -36,7 +36,7 @@ export default ({
       auth.post('login', creds)
         .then(res => {
           commit('setUser', res.data)
-          router.push({ name: 'boards' })
+          router.push({ name: 'household' })
         })
     },
     logout({ commit }) {

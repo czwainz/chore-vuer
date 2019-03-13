@@ -1,6 +1,6 @@
 <template>
   <div class="household row">
-
+    OMG A HOUSEHOLD
 
   </div>
 </template>

@@ -9,12 +9,12 @@
 
 <script>
   // @ is an alias to /src
-
+  import households from '@/views/households'
 
   export default {
-    name: 'home',
+    name: 'households',
     components: {
-
+      households
     }
   }
 </script>
