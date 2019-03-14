@@ -12,14 +12,16 @@ let api = Axios.create({
 })
 
 export default ({
+  state: {
+    households: []
+  },
   mutations: {
     setHouseholds(state, data) {
       state.households = data
     }
-
   },
   actions: {
-    getHouseholds({ commit, dispatch }) {
+    getHouseholds({ commit, dispatch, rootState }) {
       api.get('')
         .then(res => {
           commit('setHouseholds', res.data)
@@ -28,7 +30,6 @@ export default ({
     addHousehold({ commit, dispatch }, payload) {
       api.post('', payload)
         .then(res => {
-          debugger
           dispatch('getHouseholds')
         })
     }

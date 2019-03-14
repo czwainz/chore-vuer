@@ -11,8 +11,7 @@ Vue.component('drop', Drop);
 
 export default new Vuex.Store({
   state: {
-    user: {},
-    households: []
+    user: {}
   },
   modules: {
     authStore,
