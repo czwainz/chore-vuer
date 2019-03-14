@@ -38,7 +38,7 @@ router.get('/:id/lists', (req, res, next) => {
     })
 })
 
-//POST BOARD IN SESSION
+//POST HOUSEHOLD IN SESSION
 router.post('/', (req, res, next) => {
   req.body.authorId = req.session.uid
   Household.create(req.body)

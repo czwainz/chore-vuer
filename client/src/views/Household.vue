@@ -1,6 +1,8 @@
 <template>
-  <div class="">
+  <div class="household row">
+    <div class="col-12 ">
 
+    </div>
   </div>
 </template>
 
