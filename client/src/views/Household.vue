@@ -1,7 +1,8 @@
 <template>
   <div class="household row">
     <div class="col-12 ">
-
+      <h4>THIS A HOUSEHOLD</h4>
+      {{householdData}}
     </div>
   </div>
 </template>
@@ -15,7 +16,8 @@
       }
     },
     computed: {},
-    methods: {}
+    methods: {},
+    props: ['householdData']
   }
 
 </script>

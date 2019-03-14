@@ -10,7 +10,8 @@
       </div>
     </div>
     <div class="row">
-      <div class="card col bg-warning mx-3 pt-1" v-for="house in households">
+      <div class="card col bg-warning mx-3 pt-1" v-for="house in households"
+        @click="$router.push({name: 'household', params: {householdId: house._id}})" :householdData="house">
         <h4>{{house.title}}</h4>
       </div>
     </div>
