@@ -1,7 +1,7 @@
 <template>
-  <div class="list row">
-    <div class="col-12">
-      {{lists}}
+  <div class="list row justify-content-center d-flex">
+    <div class="card col-8" v-for="list in lists">
+      {{list.title}}
     </div>
     <div class="col-12 form-group">
       <form @submit.prevent="addList">
@@ -33,7 +33,11 @@
         return this.$store.state.dataStore.lists
       }
     },
-    methods: {}
+    methods: {
+      addList() {
+        this.$store.dispatch('addList', this.newList)
+      }
+    }
   }
 
 </script>

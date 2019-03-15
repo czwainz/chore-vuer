@@ -64,7 +64,7 @@ export default ({
       api.post('lists/', payload)
         .then(res => {
           debugger
-          dispatch('getLists', payload.boardId)
+          dispatch('getLists', payload.householdId)
         })
     }
   },
