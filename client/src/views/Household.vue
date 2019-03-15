@@ -1,8 +1,7 @@
 <template>
   <div class="household row">
-    <div class="card col">
-
-
+    <div class="col-12">
+      <h3>{{activeHousehold.title}}</h3>
     </div>
   </div>
 </template>
@@ -11,7 +10,7 @@
   export default {
     name: 'household',
     mounted() {
-      this.$store.dispatch('getOneHousehold', this.$route.params.id)
+      this.$store.dispatch('getOneHousehold', this.$route.params.householdId)
     },
     data() {
       return {
@@ -20,11 +19,11 @@
     },
     computed: {
       activeHousehold() {
-        return this.$store.state.dataStore.activeHousehold
+        return this.$store.state.dataStore.activeHouse
       }
     },
     methods: {},
-    props: ['householdData']
+    props: ['house']
   }
 
 </script>
