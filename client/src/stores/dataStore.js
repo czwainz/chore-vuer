@@ -14,7 +14,8 @@ let api = Axios.create({
 export default ({
   state: {
     households: [],
-    activeHouse: {}
+    activeHouse: {},
+    lists: []
   },
   mutations: {
     setHouseholds(state, data) {
@@ -22,6 +23,9 @@ export default ({
     },
     setOneHouse(state, data) {
       state.activeHouse = data
+    },
+    setLists(state, data) {
+      state.lists = data
     }
   },
   actions: {
@@ -48,8 +52,21 @@ export default ({
         .then(res => {
           dispatch('getHouseholds')
         })
+    },
+    //LISTS
+    getLists({ commit, dispatch }, payload) {
+      api.get(payload + '/lists')
+        .then(res => {
+          commit('setLists', res.data)
+        })
+    },
+    addList({ commit, dispatch }, payload) {
+      api.post('lists/', payload)
+        .then(res => {
+          debugger
+          dispatch('getLists', payload.boardId)
+        })
     }
-
   },
 
 })

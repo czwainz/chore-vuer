@@ -1,16 +1,22 @@
 <template>
-  <div class="household row">
-    <div class="col-12">
-      <h3>{{activeHousehold.title}}</h3>
+  <div class="container-fluid">
+    <div class="household row justify-content-center d-flex align-items-center">
+      <div class="col-12 text-center">
+        <h3>{{activeHousehold.title}}</h3>
+      </div>
     </div>
+    <list></list>
   </div>
 </template>
 
 <script>
+  import list from '@/components/List.vue'
+
   export default {
     name: 'household',
     mounted() {
       this.$store.dispatch('getOneHousehold', this.$route.params.householdId)
+      this.$store.dispatch('getLists', this.$route.params.householdId)
     },
     data() {
       return {
@@ -23,7 +29,10 @@
       }
     },
     methods: {},
-    props: ['house']
+    props: ['house'],
+    components: {
+      list
+    }
   }
 
 </script>

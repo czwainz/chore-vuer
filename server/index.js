@@ -50,7 +50,7 @@ let householdRoutes = require('./server-assets/routes/household')
 server.use('/api/household', householdRoutes)
 
 let listRoutes = require('./server-assets/routes/list')
-server.use('/api/lists/', listRoutes)
+server.use('/api/household/lists', listRoutes)
 
 // let taskRoutes = require('./server-assets/routes/task')
 // server.use('/api/tasks', taskRoutes)
