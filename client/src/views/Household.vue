@@ -6,10 +6,12 @@
       </div>
     </div>
     <list></list>
-    <div class="row">
-        <div class="col-12 justify-content-start d-flex py-1 px-1 border-warning">
-          <i @click="deleteHousehold(house._id)" class="fas fa-dumpster-fire"></i>
-        </div>
+    <div class="row align-self-end">
+      <div class="col-12 justify-content-start d-flex">
+        <button @click="deleteHousehold(house._id)" class="btn btn-warning">
+          <i class="fas fa-dumpster-fire"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
