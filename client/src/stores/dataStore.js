@@ -13,11 +13,15 @@ let api = Axios.create({
 
 export default ({
   state: {
-    households: []
+    households: [],
+    activeHouse: {}
   },
   mutations: {
     setHouseholds(state, data) {
       state.households = data
+    },
+    setOneHouse(state, data) {
+      state.activeHouse = data
     }
   },
   actions: {
@@ -27,8 +31,20 @@ export default ({
           commit('setHouseholds', res.data)
         })
     },
+    getOneHousehold({ commit, dispatch }, householdId) {
+      api.get('' + householdId)
+        .then(res => {
+          commit('setOneHouse', res.data)
+        })
+    },
     addHousehold({ commit, dispatch }, payload) {
       api.post('', payload)
+        .then(res => {
+          dispatch('getHouseholds')
+        })
+    },
+    editHousehold({ commit, dispatch }, payload) {
+      api.put('' + payload.householdId, payload)
         .then(res => {
           dispatch('getHouseholds')
         })
