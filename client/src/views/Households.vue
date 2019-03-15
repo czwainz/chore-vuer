@@ -10,9 +10,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="card col bg-warning mx-3 pt-1" v-for="house in households"
+      <div class="card shadow border-primary col-4 bg-warning my-3 mx-3 pt-1 px-0" v-for="house in households"
         @click="$router.push({name: 'household', params: {householdId: house._id}})">
-        <h4>{{house.title}}</h4>
+        <div class="card-body">
+          <h4>{{house.title}}</h4>
+        </div>
       </div>
     </div>
   </div>
@@ -41,6 +43,9 @@
     methods: {
       addHousehold() {
         this.$store.dispatch('addHousehold', this.newHousehold)
+      },
+      deleteHousehold(id) {
+        this.$store.dispatch('deleteHousehold', id)
       }
     },
     computed: {

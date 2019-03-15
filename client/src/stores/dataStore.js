@@ -53,6 +53,12 @@ export default ({
           dispatch('getHouseholds')
         })
     },
+    deleteHousehold({ commit, dispatch }, payload) {
+      api.delete('' + payload)
+        .then(res => {
+          dispatch('getHouseholds')
+        })
+    },
     //LISTS
     getLists({ commit, dispatch }, payload) {
       api.get(payload + '/lists')
