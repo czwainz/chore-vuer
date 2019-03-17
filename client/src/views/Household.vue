@@ -35,7 +35,11 @@
         return this.$store.state.dataStore.activeHouse
       }
     },
-    methods: {},
+    methods: {
+      deleteHousehold(id) {
+        this.$store.dispatch('deleteHousehold', id)
+      }
+    },
     props: ['house'],
     components: {
       list
