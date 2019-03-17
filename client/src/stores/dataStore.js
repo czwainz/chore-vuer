@@ -57,6 +57,7 @@ export default ({
       api.delete('' + payload)
         .then(res => {
           dispatch('getHouseholds')
+          router.push({ name: 'households' })
         })
     },
     //LISTS

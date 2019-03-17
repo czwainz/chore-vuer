@@ -8,7 +8,7 @@
     <list></list>
     <div class="row align-self-end">
       <div class="col-12 justify-content-start d-flex">
-        <button @click="deleteHousehold(house._id)" class="btn btn-warning">
+        <button @click="deleteHousehold(activeHousehold._id)" class="btn btn-warning">
           <i class="fas fa-dumpster-fire"></i>
         </button>
       </div>
