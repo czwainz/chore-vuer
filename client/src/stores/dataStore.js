@@ -62,7 +62,7 @@ export default ({
     },
     //LISTS
     getLists({ commit, dispatch }, payload) {
-      api.get(payload + '/lists')
+      api.get(payload + '/lists/')
         .then(res => {
           commit('setLists', res.data)
         })
