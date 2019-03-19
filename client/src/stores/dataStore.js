@@ -70,7 +70,6 @@ export default ({
     addList({ commit, dispatch }, payload) {
       api.post('lists/', payload)
         .then(res => {
-          debugger
           dispatch('getLists', payload.householdId)
         })
     }

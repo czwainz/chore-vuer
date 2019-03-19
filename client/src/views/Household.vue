@@ -1,14 +1,14 @@
 <template>
-  <div class="container-fluid vh-100">
+  <div class="container-fluid">
     <div class="household row justify-content-center d-flex align-items-center">
       <div class="col-12 text-center">
         <h3>{{activeHousehold.title}}</h3>
       </div>
     </div>
     <list></list>
-    <div class="row align-self-end">
+    <div class="row align-self-end flex-column">
       <div class="col-12 justify-content-start d-flex">
-        <button @click="deleteHousehold(activeHousehold._id)" class="btn btn-warning">
+        <button @click="deleteHousehold(activeHousehold._id)" class="btn btn-warning shadow border-danger">
           <i class="fas fa-dumpster-fire"></i>
         </button>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="list row justify-content-center d-flex">
-    <div class="card col-8" v-for="list in lists">
+    <div class="card col-8 shadow" width="200px" max-height="200px" v-for="list in lists">
       {{list.title}}
     </div>
     <div class="col-12 form-group">
