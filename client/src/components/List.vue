@@ -1,13 +1,13 @@
 <template>
   <div class="list row justify-content-center d-flex">
-    <div class="card col-8 shadow" width="200px" max-height="200px" v-for="list in lists">
-      {{list.title}}
+    <div class="card col-7 shadow-sm my-1" width="200px" max-height="200px" v-for="list in lists">
+      <h6> {{list.title}} </h6>
     </div>
     <div class="col-12 form-group">
       <form @submit.prevent="addList">
-        <input type="text" v-model="newList.title" class="form-control my-1" placeholder="Member Name">
-        <input type="text" v-model="newList.description" class="form-control my-1" placeholder="Description">
-        <button type="submit" class="btn btn-info my-1">Add New Member</button>
+        <input type="text" v-model="newList.title" class="form-control my-1 shadow-sm" placeholder="Member Name">
+        <input type="text" v-model="newList.description" class="form-control my-1 shadow-sm" placeholder="Description">
+        <button type="submit" class="btn btn-info my-1 shadow-sm">Add New Member</button>
       </form>
     </div>
   </div>
