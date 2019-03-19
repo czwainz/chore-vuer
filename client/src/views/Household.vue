@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid vh-100">
     <div class="household row justify-content-center d-flex align-items-center">
       <div class="col-12 text-center">
         <h3>{{activeHousehold.title}}</h3>

@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="card shadow border-primary col-4 bg-warning my-3 mx-3 pt-1 px-0" v-for="house in households"
+      <div class="card shadow border-secondary col-4 bg-warning my-3 mx-3 pt-1 px-0" v-for="house in households"
         @click="$router.push({name: 'household', params: {householdId: house._id}})">
         <div class="card-body">
           <h4>{{house.title}}</h4>
