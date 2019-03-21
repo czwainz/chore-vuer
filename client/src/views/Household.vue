@@ -33,6 +33,9 @@
     computed: {
       activeHousehold() {
         return this.$store.state.dataStore.activeHouse
+      },
+      gifs() {
+        return this.$store.state.dataStore.gifs
       }
     },
     methods: {

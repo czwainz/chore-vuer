@@ -2,8 +2,6 @@
   <div class="list row justify-content-around d-flex ">
     <div class="card shadow-sm my-2 mx-3 cardClass" v-for="list in lists">
       <h6> {{list.title}} </h6>
-      <img src="../assets/clothespin.jpg" alt="clothesPin"
-        style="transform: translateX(100); height: 15rem; width: auto;">
     </div>
     <div class="col-12 form-group">
       <form @submit.prevent="addList">
@@ -12,10 +10,14 @@
         <button type="submit" class="btn btn-info my-1 shadow-sm">Add New Member</button>
       </form>
     </div>
+    <div class="col-12">
+      <gifs></gifs>
+    </div>
   </div>
 </template>
 
 <script>
+  import gifs from "@/components/Gifs.vue"
   export default {
     name: 'list',
     data() {
@@ -39,6 +41,9 @@
       addList() {
         this.$store.dispatch('addList', this.newList)
       }
+    },
+    components: {
+      gifs
     }
   }
 

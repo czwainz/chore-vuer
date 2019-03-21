@@ -5,17 +5,26 @@ import router from '../router'
 
 Vue.use(Vuex)
 
+
 let api = Axios.create({
   baseURL: "//localhost:3000/api/household",
   timeout: 3000,
   withCredentials: true
 })
 
+let apiKey = "?api_key=191et5ltw1pAORwrsOLBoruA7MRltMtr&"
+
+let _gif = Axios.create({
+  baseURL: 'http://api.giphy.com/v1/gifs/',
+  timeout: 3000
+})
+
 export default ({
   state: {
     households: [],
     activeHouse: {},
-    lists: []
+    lists: [],
+    gifs: []
   },
   mutations: {
     setHouseholds(state, data) {
@@ -26,6 +35,9 @@ export default ({
     },
     setLists(state, data) {
       state.lists = data
+    },
+    setGifs(state, data) {
+      state.gifs = data
     }
   },
   actions: {
@@ -71,6 +83,12 @@ export default ({
       api.post('lists/', payload)
         .then(res => {
           dispatch('getLists', payload.householdId)
+        })
+    },
+    getGifs({ commit, dispatch }) {
+      _gif.get('trending' + apiKey)
+        .then(res => {
+          commit('setGifs', res.data)
         })
     }
   },
