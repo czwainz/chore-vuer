@@ -1,7 +1,7 @@
 <template>
-  <div class="gifs row">
-    <div class="card col-3" v-for="gif in gifs">
-      <img :src="gif.embed_url.images.preview_gif.url" alt="gif">
+  <div class="gifs row justify-content-around d-flex">
+    <div class="card col-3 gifCard my-1 mx-1" v-for="gif in gifs">
+      <iframe :src="gif.embed_url"></iframe>
     </div>
   </div>
 </template>
@@ -28,6 +28,8 @@
 </script>
 
 <style>
-
-
+  .gifCard {
+    height: 200px;
+    width: 200px;
+  }
 </style>

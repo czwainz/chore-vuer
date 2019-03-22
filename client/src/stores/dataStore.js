@@ -88,7 +88,7 @@ export default ({
     getGifs({ commit, dispatch }) {
       _gif.get('trending' + apiKey)
         .then(res => {
-          commit('setGifs', res.data)
+          commit('setGifs', res.data.data)
         })
     }
   },
