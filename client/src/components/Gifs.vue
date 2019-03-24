@@ -10,9 +10,7 @@
   export default {
     name: 'gifs',
     data() {
-      return {
-
-      }
+      return {}
     },
     mounted() {
       this.$store.dispatch('getGifs')
