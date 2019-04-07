@@ -1,6 +1,6 @@
 <template>
   <div class="gifs row justify-content-around d-flex">
-    <div class="card col-3 gifCard my-1 mx-1 shadow" v-for="gif in gifs">
+    <div class="card col-3 gifCard my-1 mx-1 shadow-sm" v-for="gif in gifs">
       <iframe :src="gif.embed_url"></iframe>
     </div>
   </div>

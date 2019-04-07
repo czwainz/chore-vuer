@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="household row justify-content-center d-flex align-items-center">
       <div class="col-12 text-center">
-        <h3>{{activeHousehold.title}}</h3>
+        <h4>{{activeHousehold.title}}</h4>
       </div>
     </div>
     <list></list>
